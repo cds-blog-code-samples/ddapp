@@ -15,9 +15,9 @@
     "css-loader": "0.26.0",
     "detect-port": "1.0.1",
     "dotenv": "2.0.0",
-    "drizzle": "^1.0.1",
-    "drizzle-react": "^1.0.1",
-    "drizzle-react-components": "^1.0.1",
+    "drizzle": "^1.1.0",
+    "drizzle-react": "^1.1.0",
+    "drizzle-react-components": "^1.1.0",
     "eslint": "3.8.1",
     "eslint-config-react-app": "^0.5.0",
     "eslint-loader": "1.6.0",
@@ -68,12 +68,15 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
-    "chain":
-      "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console"
+    "chain": "geth --datadir=\"/tmp/eth/60/01\" --nodiscover --maxpeers 0 --port 30301 --rpc --rpcapi \"db,eth,net,web3\" --rpcport 8101 --verbosity 6 console"
   },
   "jest": {
-    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
-    "setupFiles": ["<rootDir>\\config\\polyfills.js"],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>\\config\\polyfills.js"
+    ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules)[/\\\\]"
     ],
@@ -84,13 +87,17 @@
       "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
       "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
     },
-    "transformIgnorePatterns": ["[/\\\\]node_modules[/\\\\].+/.(js|jsx)$"],
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+/.(js|jsx)$"
+    ],
     "moduleNameMapper": {
       "^react-native$": "react-native-web"
     }
   },
   "babel": {
-    "presets": ["react-app"]
+    "presets": [
+      "react-app"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
